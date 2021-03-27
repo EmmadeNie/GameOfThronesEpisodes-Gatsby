@@ -19,6 +19,7 @@
     "gatsby": "^3.1.2",
     "gatsby-source-filesystem": "^3.1.0",
     "gatsby-transformer-json": "^3.1.0",
+    "json-loader": "^0.5.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
