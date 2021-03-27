@@ -12,14 +12,16 @@ dataJson {
       episodes {
         id
         name
+        season
       }
     }
   }
 }
 `)
     const episodes = data.dataJson.gameOfThrones.episodes;
+    console.log(episodes.map(ep=> ep.season))
     episodes.forEach(episode=> actions.createPage({
-        path: `/${episode.id}/`,
+        path: `/Season${episode.season}/${episode.id}/`,
         component: require.resolve(`./src/templates/EpisodePage.js`),
         context: episode,
     }));
@@ -27,5 +29,5 @@ dataJson {
         path: `/Season${season}/`,
         component: require.resolve(`./src/templates/SeasonPage.js`),
         context: {season},
-    }))
+    }));
 };
