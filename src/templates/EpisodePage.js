@@ -5,7 +5,6 @@ import Layout from "../Components/Layout";
 import InfoTag from "../Components/InfoTag";
 
 const EpisodePage = ({pageContext})=> {
-    console.log(getEpisodeData(pageContext.id))
     const episodeData = getEpisodeData(pageContext.id)
     return<Layout>
         <div className={"Episode--container"}>

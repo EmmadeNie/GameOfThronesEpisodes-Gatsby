@@ -1,11 +1,12 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import {generateSeasonLink, generateSeasonLinkSmallScreen} from "../utils/generateLinks";
 import title from "../media/title.jpg"
 
 const Header=()=>{
-    const mobileScreen = window.screen.width < 650
+    const [mobileScreen, setMobileScreen] = useState(false)
 
-    console.log(mobileScreen)
+    useEffect(()=>{setMobileScreen(window.screen.width < 650)},[])
+
 
     return <header><div><img src={title} alt={"title"} height={"auto"} width={"100%"}/></div><nav><ul>
         { mobileScreen ?
