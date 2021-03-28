@@ -2,8 +2,9 @@ import React from "react"
 import {Link} from "gatsby";
 import {getEpisodesPerSeason} from "../utils/getDataFunctions";
 
+
 const SeasonPage = ({pageContext})=> {
-    const generateEpisodeLink = ( episode ) =>
+   const generateEpisodeLink = ( episode ) =>
         <li key={episode.id} className="day_link">
             <Link to={`/Season${episode.season}/${episode.id}/`}>
                 Episode {episode.number} - {episode.name}
