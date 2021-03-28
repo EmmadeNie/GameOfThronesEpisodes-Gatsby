@@ -1,17 +1,17 @@
 import React from "react"
 import generateEpisodeLink from "../utils/generateLinks";
-import {getEpisodeData, getNextEpisode} from "../utils/getDataFunctions";
+import {getEpisodeData, getNextEpisode, getPrevEpisode} from "../utils/getDataFunctions";
 
 
 const PrevNextLinks = ({episodeId})=> {
 
-    const getNextLink = ()=> {
+    const getNextLink =()=> {
         if (getNextEpisode(episodeId)) {
             generateEpisodeLink(getEpisodeData(getNextEpisode(episodeId)))
         }
     }
-    const getPrevLink = ()=> {
-        if (getPrevLink(episodeId)) {
+    const getPrevLink =()=> {
+        if (getPrevEpisode(episodeId)) {
             generateEpisodeLink(getEpisodeData(getPrevLink(episodeId)))
         }
     }
