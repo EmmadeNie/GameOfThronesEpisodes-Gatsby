@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../Components/Layout";
 import Home from "../Components/Home";
-import {getGameOfThronesData} from "../utils/getDataFunctions";
+import {getAllEpisodes, getPrevEpisode} from "../utils/getDataFunctions";
 
 
 const Index = ()=> {
- getGameOfThronesData()
-
+ console.log(getAllEpisodes())
+getPrevEpisode(4975)
  return  <Layout><Home/></Layout>
 }
 

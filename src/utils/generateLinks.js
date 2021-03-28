@@ -8,4 +8,19 @@ const generateEpisodeLink = ( episode ) =>
         </Link>
     </li>
 
+export const generatePrevLink = ( episode ) =>
+    <li key={episode.id} className="day_link">
+        <Link to={`/Season${episode.season}/${episode.id}/`}>
+            Previous Episode
+        </Link>
+    </li>
+
+export const generateNextLink = ( episode ) =>
+    <li key={episode.id} className="day_link">
+        <Link to={`/Season${episode.season}/${episode.id}/`}>
+            Next Episode
+        </Link>
+    </li>
+
+
 export default generateEpisodeLink
