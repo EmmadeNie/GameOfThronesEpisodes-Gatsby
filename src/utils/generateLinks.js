@@ -1,10 +1,24 @@
 import {Link} from "gatsby";
 import React from "react";
 
+export const generateSeasonLink = ( number ) =>
+    <li key={number} className="day_link">
+        <Link to={`/Season${number}/`}>
+            Season {number}
+        </Link>
+    </li>
+
+export const generateSeasonLinkSmallScreen = ( number ) =>
+    <li key={number} className="day_link">
+        <Link to={`/Season${number}/`}>
+            S {number}
+        </Link>
+    </li>
+
 const generateEpisodeLink = ( episode ) =>
     <li key={episode.id} className="day_link">
         <Link to={`/Season${episode.season}/${episode.id}/`}>
-            Episode {episode.number} - {episode.name}
+            {episode.number} - {episode.name}
         </Link>
     </li>
 

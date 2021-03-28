@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 const Layout = ({children}) => {
 
     return (
-        <div>
-            <Header siteTitle="Default Starter" />
-            {children}
+        <div className={"App--container"}>
+            <Header />
+            <main className={"Main--container"}>{children}</main>
+            <Footer/>
         </div>
     );
 };

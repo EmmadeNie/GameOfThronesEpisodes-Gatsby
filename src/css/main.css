@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'GameOfThronesFont';
+    src: local('MyFont'), url("../media/Game of Thrones.ttf") format('truetype');
+}
+
+html, body {
+    position: relative;
+    margin: 0;
+min-height: 100vh;
+    background-color: black;
+color: white}
+
+.App--container{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.Main--container{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    margin: 30px;
+    text-align: center;
+font-family: GameOfThronesFont}
+
+nav {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    height: 50px;
+}
+ul {
+    display:inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 10px;
+}
+
+h1{
+    font-family: GameOfThronesFont;
+    /*font-size: 12px;*/
+    font-weight: 100
+}
+
+.Episode--Link-container li {
+    display: inline;
+    margin: 10px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'GameOfThronesFont';
+    font-size: 12px;
+    font-weight: 100;
+}
+
+a:hover {
+    text-decoration: underline;
+    box-shadow: 0 8px 6px -6px white;
+}
+a:active {
+    font-size: 18px
+}
+
+.Episode--container{
+    display:flex;
+    margin: 5px;}
+
+.Episode--image-container{
+    width: 50%;
+    height: 300px;
+    margin: 5px}
+
+.Episode--image {
+    height: 300px;
+    max-width: 100%;
+    object-fit: cover
+}
+
+.Episode--Info-container{
+    position: relative;
+    width: 50%;
+    margin:5px}
+
+.Episode--Link-container{
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    margin-top: 23px;
+    padding:3px
+}
+
+
+@media (max-width: 850px)  {
+    a{font-size: 8px}
+    .Episode--container {
+        display: block;
+    }
+    .Episode--image-container{
+        width: 100%}
+    .Episode--Info-container{
+        width: 90%;}
+    .Episode--Link-container{
+        position: relative;}
+}
+
+@media (max-width: 650px)  {
+    .App--container{width: 95vw}
+    .Episode--Info-container{
+        width: 100%;}
+    a{font-size: 8px}
+}

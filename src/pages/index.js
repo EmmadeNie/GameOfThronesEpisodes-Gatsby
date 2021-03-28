@@ -6,7 +6,6 @@ import {getAllEpisodes, getPrevEpisode} from "../utils/getDataFunctions";
 
 const Index = ()=> {
  console.log(getAllEpisodes())
-getPrevEpisode(4975)
  return  <Layout><Home/></Layout>
 }
 
